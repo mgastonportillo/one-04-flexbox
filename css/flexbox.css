@@ -23,7 +23,6 @@
 .rodapePrincipal-contatoForm-fieldset {
 	display: flex;
 	justify-content: space-between;
-	/* gap: 10px; */
 	width: 30%;
 }
 
@@ -44,9 +43,28 @@
 	width: 23%;
 }
 
+.videoSobre .container {
+	display: flex;
+}
+
+.videoSobre-sobre {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.videoSobre-video {
+	flex-grow: 2;
+	flex-shrink: 2;
+}
+
+.videoSobre-sobre-list {
+	flex-grow: 2;
+}
+
 /* Responsive */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 769px) {
 	.headerPrincipal .container {
 		flex-direction: column;
 		align-items: initial;
@@ -54,6 +72,49 @@
 	}
 
 	.headerPrincipal-nav {
+		flex-direction: column;
+	}
+
+	.contenidoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.contenidoPrincipal-cursos-link {
+		width: 100%;
+	}
+
+	.rodapePrincipal-navMap-list {
+		height: auto;
+		flex-wrap: nowrap;
+	}
+
+	.rodapePrincipal-patrocinadores .container {
+		flex-direction: column;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* Compatibilidad con Firefox */
+	/* También le agregué un ancho a cdc.svg (interno) porque no lo tenía: width="120" */
+	.rodapePrincipal-contatoForm-legend {
+		width: 100%;
+		margin-left: calc(50%);
+		transform: translateX(-50%);
+	}
+
+	.headerPrincipal-nav-link-app {
+		order: -1;
+	}
+
+	.videoSobre .container {
 		flex-direction: column;
 	}
 }
